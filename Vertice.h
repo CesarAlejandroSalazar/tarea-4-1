@@ -8,6 +8,11 @@ class Vertice{
       id = "";
       dato = 0;
     }
+  	
+  Vertice(string id, int dato){
+      this->id = id;
+      this->dato = dato;
+    }
     
     void setId(string id){
       this->id = id;
