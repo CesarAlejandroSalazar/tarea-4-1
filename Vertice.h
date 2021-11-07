@@ -9,7 +9,7 @@ class Vertice{
       dato = 0;
     }
   	
-  Vertice(string id, int dato){
+    Vertice(string id, int dato){
       this->id = id;
       this->dato = dato;
     }
