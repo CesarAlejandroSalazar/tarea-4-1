@@ -9,19 +9,19 @@ class Vertice{
       dato = 0;
     }
     
-    void setid(string id){
-      id = id;
+    void setId(string id){
+      this->id = id;
     }
     
-    string getid(){
+    string getId(){
       return id;
     }
     
-    void setdato(int dato){
-      dato = dato;
+    void setDato(int dato){
+      this->dato = dato;
     }
     
-    int getdato(){
+    int getDato(){
       return dato;
     }
     
