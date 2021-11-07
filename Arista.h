@@ -2,6 +2,14 @@
 using namespace std;
 class Arista{
     public:
+        Arista(){
+            id = "";
+            dato = 0;
+        }
+        Arista(string id, int dato){
+            this->id = id;
+            this->dato = dato;
+        }
         void setId(string id){
             this->id = id;
         }
