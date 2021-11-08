@@ -68,8 +68,8 @@ class Vertice{
     void print()
     {
         Vertice *curr = head;
-        cout << "El contenido de la Lista" << endl;
-        while (curr != nullptr)
+        cout << "El contenido del grafo" << endl;
+        while (curr->getNext() != nullptr)
         {
             cout << curr->getDato() << endl;
             curr = curr->getNext()->getVj();
