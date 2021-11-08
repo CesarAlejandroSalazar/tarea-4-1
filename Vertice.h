@@ -49,7 +49,7 @@ class Vertice{
         while (curr != nullptr)
         {
             cout << curr->getDato() << endl;
-            curr = curr->getNext()->getNext();
+            curr = curr->getNext()->getVj();
         }
     }
     
