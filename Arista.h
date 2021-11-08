@@ -26,13 +26,8 @@ class Arista{
         Vertice *getVj(){
             return vj;
         }
-        void connect(Vertice* vj){
-            if(numAristas == 0){
-                Arista *arista = new Arista(nullptr, vj);
-            }
-            else{
-                Arista *arista = new Arista(vi, vj);
-            }
+        void connect(Vertice* vi, Vertice* vj){
+            Arista *arista = new Arista(vi, vj);
         }
 
     private:

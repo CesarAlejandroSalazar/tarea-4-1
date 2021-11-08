@@ -6,8 +6,12 @@ class Vertice{
   public:
     Vertice(){
       id = 0;
-      dato = 0;
+      dato = "";
       numVertices = 0;
+      next = nullptr;
+      prev = nullptr;
+      head = nullptr;
+      tail = nullptr;
     }
   	
     Vertice(int id, int dato){
@@ -23,11 +27,11 @@ class Vertice{
       return id;
     }
     
-    void setDato(int dato){
+    void setDato(string dato){
       this->dato = dato;
     }
     
-    int getDato(){
+    string getDato(){
       return dato;
     }
 
@@ -48,9 +52,17 @@ class Vertice{
       Vertice *aux = new Vertice(id, dato);
       if (numVertices==0){
         head = aux;
+        numVertices++;
       }
       else{
+        Vertice *current = head;
+        while(current->getNext() != nullptr){
+          current = current->getNext()->getVj();
+        }
+        Arista aristaaux;
         tail = aux;
+        aristaaux.connect(current,tail);
+        numVertices++;
       }
     }
     void print()
@@ -66,7 +78,8 @@ class Vertice{
     
   
   private:
-    int id, dato, numVertices;
+    int id, numVertices;
+    string dato;
     Vertice *head, *tail;
     Arista *next, *prev;
 };
