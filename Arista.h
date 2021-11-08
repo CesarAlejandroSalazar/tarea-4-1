@@ -1,5 +1,7 @@
 #include <string>
+#include "Vertice.h"
 using namespace std;
+
 class Arista{
     public:
         Arista(){
