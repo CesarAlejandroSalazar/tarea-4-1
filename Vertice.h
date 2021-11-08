@@ -1,5 +1,5 @@
 // Un archivo Vertice.cpp que contiene a la clase Vertice con los atributos privados id y dato y con los métodos get y set correspondientes a estos dos atributos //
-#include "Arista.h"
+
 #include <iostream>
 using namespace std;
 class Vertice{
@@ -7,11 +7,9 @@ class Vertice{
     Vertice(){
       id = 0;
       dato = "";
-      numVertices = 0;
       next = nullptr;
       prev = nullptr;
-      head = nullptr;
-      tail = nullptr;
+
     }
   	
     Vertice(int id, int dato){
@@ -35,51 +33,22 @@ class Vertice{
       return dato;
     }
 
-    void setNext(Arista *next){
+    void setNext(Vertice *next){
       this->next = next;
     }
-    void setPrev(Arista *prev){
+    void setPrev(Vertice *prev){
       this->prev = prev;
     }
-    Arista *getNext(){
+    Vertice *getNext(){
       return next;
     }
-    Arista *getPrev(){
+    Vertice *getPrev(){
       return prev;
-    }
-
-    void nuevoVertice(int id, int dato){
-      Vertice *aux = new Vertice(id, dato);
-      if (numVertices==0){
-        head = aux;
-        numVertices++;
-      }
-      else{
-        Vertice *current = head;
-        while(current->getNext() != nullptr){
-          current = current->getNext()->getVj();
-        }
-        Arista aristaaux;
-        tail = aux;
-        aristaaux.connect(current,tail);
-        numVertices++;
-      }
-    }
-    void print()
-    {
-        Vertice *curr = head;
-        cout << "El contenido del grafo" << endl;
-        while (curr->getNext() != nullptr)
-        {
-            cout << curr->getDato() << endl;
-            curr = curr->getNext()->getVj();
-        }
     }
     
   
   private:
-    int id, numVertices;
+    int id;
     string dato;
-    Vertice *head, *tail;
-    Arista *next, *prev;
+    Vertice *next, *prev;
 };
