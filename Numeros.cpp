@@ -8,25 +8,25 @@
 
 using namespace std;
 
-int main(){
-	vector<string> NumGuar{};
-	string DatoInsertado;
-	
-	
-	cin >> DatoInsertado;
+int main() {
+  vector < string > NumGuar {};
+  string DatoInsertado;
+  int count = 0;
+
+  cin >> DatoInsertado;
   char delimiter = ',';
-    
 
   stringstream sstream(DatoInsertado);
   string Num;
 
-   while (std::getline(sstream, Num, delimiter)){
-     NumGuar.push_back(Num);
-   }
+  while (getline(sstream, Num, delimiter)) {
+    NumGuar.push_back(Num);
+    count += 1;
+  }
 
-   for (const auto &str : NumGuar) {
-     cout << str << endl;
-   }
+  for (int i = 0; i < count; i++) {
+    cout << NumGuar[i] << endl;
+  }
 
-    return 0;
+  return 0;
 }
