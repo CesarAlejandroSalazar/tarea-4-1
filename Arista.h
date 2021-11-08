@@ -3,29 +3,28 @@ using namespace std;
 class Arista{
     public:
         Arista(){
-            this->vi=0;
-            this->vj=0;
+            this->vi=nullptr;
+            this->vj=nullptr;
         }
 
-        Arista(int vi, int vj){
-            this->vi= vi;
-            this->vj= vj;
-        }
-        void setVi(int vi){
+        void setVi(Vertice *vi){
             this->vi = vi;
         }
-        int getVi(){
+        Vertice *getVi(){
             return vi;
         }
-        void setVj(int vj){
+        void setVj(Vertice* vj){
             this->vj = vj;
         }
-        int getVj(){
+        Vertice *getVj(){
             return vj;
+        }
+        void addFirst(){
+            Arista(Vertice vj);
         }
 
     private:
-        int vi, vj;
+        Vertice *vi, *vj;
         
 
 };
