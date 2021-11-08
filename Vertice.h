@@ -5,20 +5,21 @@ using namespace std;
 class Vertice{
   public:
     Vertice(){
-      id = "";
+      id = 0;
       dato = 0;
+      numVertices = 0;
     }
   	
-    Vertice(string id, int dato){
+    Vertice(int id, int dato){
       this->id = id;
       this->dato = dato;
     }
     
-    void setId(string id){
+    void setId(int id){
       this->id = id;
     }
     
-    string getId(){
+    int getId(){
       return id;
     }
     
@@ -42,6 +43,16 @@ class Vertice{
     Arista *getPrev(){
       return prev;
     }
+
+    void nuevoVertice(int id, int dato){
+      Vertice *aux = new Vertice(id, dato);
+      if (numVertices==0){
+        head = aux;
+      }
+      else{
+        tail = aux;
+      }
+    }
     void print()
     {
         Vertice *curr = head;
@@ -55,8 +66,7 @@ class Vertice{
     
   
   private:
-    string id;
-    int dato;
-    Vertice *head;
+    int id, dato, numVertices;
+    Vertice *head, *tail;
     Arista *next, *prev;
 };
