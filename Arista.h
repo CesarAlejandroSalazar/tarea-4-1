@@ -3,26 +3,29 @@ using namespace std;
 class Arista{
     public:
         Arista(){
-            id = "";
-            dato = 0;
+            this->vi=0;
+            this->vj=0;
         }
-        Arista(string id, int dato){
-            this->id = id;
-            this->dato = dato;
+
+        Arista(int vi, int vj){
+            this->vi= vi;
+            this->vj= vj;
         }
-        void setId(string id){
-            this->id = id;
+        void setVi(int vi){
+            this->vi = vi;
         }
-        string getId(){
-            return id;
+        int getVi(){
+            return vi;
         }
-        void setDato(int dato){
-            this->dato = dato;
+        void setVj(int vj){
+            this->vj = vj;
         }
-        int getDato(){
-            return dato;
+        int getVj(){
+            return vj;
         }
+
     private:
-        string id;
-        int dato;
+        int vi, vj;
+        
+
 };
