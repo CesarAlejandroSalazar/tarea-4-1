@@ -8,25 +8,21 @@
 
 using namespace std;
 
-int main() {
-  vector < string > NumGuar {};
-  string DatoInsertado;
-  int count = 0;
-
-  cin >> DatoInsertado;
+int main(){
+	vector<string> NumGuar{};
+	string DatoInsertado;
+	
+	cout<<"Escriba los numeros separados por comas"<<endl;
+	cin >> DatoInsertado;
   char delimiter = ',';
 
   stringstream sstream(DatoInsertado);
   string Num;
 
-  while (getline(sstream, Num, delimiter)) {
-    NumGuar.push_back(Num);
-    count += 1;
+  while (getline(sstream, Num, delimiter)){
+     NumGuar.push_back(Num);
+		 cout << Num << endl;
   }
 
-  for (int i = 0; i < count; i++) {
-    cout << NumGuar[i] << endl;
-  }
-
-  return 0;
+    return 0;
 }
