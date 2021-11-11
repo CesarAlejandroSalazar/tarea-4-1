@@ -7,12 +7,9 @@ class Vertice{
     Vertice(){
       id = 0;
       dato = "";
-      next = nullptr;
-      prev = nullptr;
-
     }
   	
-    Vertice(int id, int dato){
+    Vertice(int id, string dato){
       this->id = id;
       this->dato = dato;
     }
@@ -33,22 +30,7 @@ class Vertice{
       return dato;
     }
 
-    void setNext(Vertice *next){
-      this->next = next;
-    }
-    void setPrev(Vertice *prev){
-      this->prev = prev;
-    }
-    Vertice *getNext(){
-      return next;
-    }
-    Vertice *getPrev(){
-      return prev;
-    }
-    
-  
   private:
     int id;
     string dato;
-    Vertice *next, *prev;
 };

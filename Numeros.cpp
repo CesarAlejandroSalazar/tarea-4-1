@@ -19,14 +19,19 @@ int main(){
 
   stringstream sstream(DatoInsertado);
   string Num;
-
-   while (std::getline(sstream, Num, delimiter)){
+  Vertice *cabeza;
+  
+   while (getline(sstream, Num, delimiter)){
      NumGuar.push_back(Num);
      count ++;
    }
+   Arista *listaArista[count];
 
-   for (int i = 0; i < count; i++) {
+   for (int i = 0; i+1 < count; i++) {
      cout << NumGuar[i] << endl;
+     Vertice *primero = new Vertice(1,NumGuar[i]);
+     Vertice *segundo = new Vertice(1,NumGuar[i+1]);
+     listaArista[i] = new Arista(primero,segundo);
    }
 
     return 0;
