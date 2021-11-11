@@ -4,6 +4,7 @@
 using namespace std;
 class Vertice{
   public:
+  //Constructores
     Vertice(){
       id = 0;
       dato = "";
@@ -13,7 +14,7 @@ class Vertice{
       this->id = id;
       this->dato = dato;
     }
-    
+   //Métodos de setters y getters
     void setId(int id){
       this->id = id;
     }
