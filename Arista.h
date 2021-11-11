@@ -26,9 +26,6 @@ class Arista{
         Vertice *getVj(){
             return vj;
         }
-        void connectar(Vertice *primero, Vertice *segundo){
-            Arista *aux = new Arista(primero, segundo);
-        }
 
 
     private:
