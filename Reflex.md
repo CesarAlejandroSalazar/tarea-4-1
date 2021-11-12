@@ -6,7 +6,7 @@
 
 
 ### César
-
+Me encargue principalmente del diseño del código principal de la actividad, buscando formas de cómo utilizar las clases de Arista y Vértice para poder conectar los vértices con aristas. Diría que trabajar con graphos es algo parecido a las listas con las que he trabajado antes porque tienen la misma esencia: conectar diferentes elementos con apuntadores, para así formar una cadena de los elementos, sin embargo, aquí los grafos no tienen una 'cabeza' ni una 'cola' para definir el incio o el final, y se pueden conectar de muchas maneras. Diría que lo más complicado en la actividad fue pensar en cómo conectar los vértices con las aristas para formar la cadena de vértices. También fue bastante complicado la parte de las clases circulares, siento que es un tema que no he trabajado demasiado. 
 ### Mario
 
 ### Izel
