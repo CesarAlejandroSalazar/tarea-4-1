@@ -18,7 +18,7 @@ class Vertice{
     void setId(int id){
       this->id = id;
     }
-    
+   //funcion set para entregar como salida o resultado el dato integer del vertice  
     int getId(){
       return id;
     }
@@ -30,7 +30,7 @@ class Vertice{
     string getDato(){
       return dato;
     }
-
+   // Se construye la funcion en metodo privado para asegurar que los datos sean internos del codigo vertice
   private:
     int id;
     string dato;
